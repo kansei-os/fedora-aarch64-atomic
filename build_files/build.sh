@@ -32,7 +32,7 @@ dnf5 -y remove kernel kernel-core kernel-modules kernel-modules-core kernel-uki-
   kernel-headers kernel-tools kernel-tools-libs
 dnf5 -y versionlock delete kernel kernel-core kernel-modules \
   kernel-modules-core kernel-tools kernel-tools-libs
-dnf5 -y --repo=copr:copr.fedorainfracloud.org:@asahi:kernel install kernel kernel-core \
+dnf5 -y install kernel kernel-core \
   kernel-modules kernel-modules-core kernel-tools kernel-tools-libs
 
 dnf5 -y --repo=copr:copr.fedorainfracloud.org:@asahi:mesa install mesa spirv-llvm-translator18 virglrenderer
