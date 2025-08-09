@@ -37,6 +37,6 @@ dnf5 -y install kernel kernel-core \
 
 #dnf5 -y --repo=copr:copr.fedorainfracloud.org:@asahi:mesa install mesa spirv-llvm-translator18 virglrenderer
 dnf5 -y install mesa-asahi-24.08-flatpak
-dnf5 -y install arm-trusted-firmware crust-firmware uboot-tools
+#dnf5 -y install arm-trusted-firmware crust-firmware uboot-tools
 dnf5 -y install asahi-audio asahi-scripts m1n1
 
