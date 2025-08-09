@@ -20,5 +20,15 @@ dnf5 install -y tmux
 # dnf5 -y copr disable ublue-os/staging
 
 #### Example for enabling a System Unit File
+# systemctl enable podman.socket
 
-systemctl enable podman.socket
+dnf5 -y copf enable @asahi/kernel
+
+dnf5 -y install dnf5-plugins python3-jsonschema
+dnf5 -y copr enable @asahi/kernel
+dnf5 -y remove kernel kernel-core kernel-modules kernel-modules-core kernel-uki-virt kernel-modules-extra \
+  kernel-headers kernel-tools kernel-tools-libs
+dnf5 -y versionlock delete kernel kernel-core kernel-modules \
+  kernel-modules-core kernel-tools kernel-tools-libs
+dnf5 -y --repo=copr:copr.fedorainfracloud.org:@asahi:kernel install kernel kernel-core \
+  kernel-modules kernel-modules-core kernel-tools kernel-tools-libs
