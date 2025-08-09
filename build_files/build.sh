@@ -22,7 +22,7 @@ dnf5 install -y tmux
 #### Example for enabling a System Unit File
 # systemctl enable podman.socket
 
-dnf5 -y copf enable @asahi/kernel
+dnf5 -y copr enable @asahi/kernel
 
 dnf5 -y install dnf5-plugins python3-jsonschema
 dnf5 -y copr enable @asahi/kernel
