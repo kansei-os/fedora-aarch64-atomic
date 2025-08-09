@@ -27,6 +27,7 @@ dnf5 -y copr enable @asahi/kernel
 dnf5 -y copr enable @asahi/mesa
 dnf5 -y copr enable @asahi/flatpak
 dnf5 -y copr enable @asahi/u-boot
+dnf5 -y copr enable @asahi/packit-builds
 dnf5 -y remove kernel kernel-core kernel-modules kernel-modules-core kernel-uki-virt kernel-modules-extra \
   kernel-headers kernel-tools kernel-tools-libs
 dnf5 -y versionlock delete kernel kernel-core kernel-modules \
@@ -37,4 +38,5 @@ dnf5 -y --repo=copr:copr.fedorainfracloud.org:@asahi:kernel install kernel kerne
 dnf5 -y --repo=copr:copr.fedorainfracloud.org:@asahi:mesa install mesa spirv-llvm-translator18 virglrenderer
 dnf5 -y install mesa-asahi-24.08-flatpak
 dnf5 -y install arm-trusted-firmware crust-firmware uboot-tools
+dnf5 -y install asahi-audio asahi-scripts m1n1
 
